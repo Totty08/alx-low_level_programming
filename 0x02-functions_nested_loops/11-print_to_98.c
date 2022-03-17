@@ -1,40 +1,29 @@
-#include <std>
 #include "main.h"
-
-#include "main.h"
+#include <stdio.h>
 
 /**
-* times_table - prints the 9 times table, starting with 0
-*/
-void times_table(void)
+ * print_to_98 - prints all the natural numbers from n to 98
+ *
+ * @n: interger to be tested
+ * Return: list of numbers
+ */
+void print_to_98(int n)
 {
-int i, j, k;
+	int i;
 
-for (i = 0; i < 10; i++)
-{
-for (j = 0; j < 10; j++)
-{
-k = j * i;
-if (j == 0)
-{
-_putchar(k + '0');
-}
-
-if (k < 10 && j != 0)
-{
-_putchar(',');
-_putchar(' ');
-_putchar(' ');
-_putchar(k + '0');
-}
-else if (k >= 10)
-{
-_putchar(',');
-_putchar(' ');
-_putchar((k / 10) + '0');
-_putchar((k % 10) + '0');
-}
-}
-_putchar('\n');
-}
+	if (n <= 98)
+	{
+		for (i = n; i < 98; i++)
+		{
+			printf("%i, ", i);
+		}
+	}
+	else
+	{
+		for (i = n; i > 98; i--)
+		{
+			printf("%i, ", i);
+		}
+	}
+	printf("98\n");
 }
